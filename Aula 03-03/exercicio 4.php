@@ -23,10 +23,10 @@
                 $valor = $_POST['valor'];
                 if($valor > 100){
                     $valor = $valor - ($valor * 0.15);
-                    echo "Desconto Aplicado! Novo valor: $valor";
+                    echo "<p>Desconto Aplicado! Novo valor: $valor</p>";
                 }    
                 else
-                    echo "Valor do produto: $valor";
+                    echo "<p>Valor do produto: $valor</p>";
             }
         ?>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>

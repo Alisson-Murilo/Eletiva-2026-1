@@ -23,43 +23,43 @@
                 $valor = $_POST['valor'];
                 switch($valor){
                     case"1":
-                        echo "1 - Janeiro";
+                        echo "<p>1 - Janeiro</p>";
                         break;
                     case"2":
-                        echo "2 - Fevereiro";
+                        echo "<p>2 - Fevereiro</p>";
                         break;
                     case"3":
-                        echo "3 - Março";
+                        echo "<p>3 - Março</p>";
                         break;
                     case"4":
-                        echo "4 - Abril";
+                        echo "<p>4 - Abril</p>";
                         break;
                     case"5":
-                        echo "5 - Maio";
+                        echo "<p>5 - Maio</p>";
                         break;
                     case"6":
-                        echo "6 - Junho";
+                        echo "<p>6 - Junho</p>";
                         break;
                     case"7":
-                        echo "7 - Julho";
+                        echo "<p>7 - Julho</p>";
                         break;
                     case"8":
-                        echo "8 - Agosto";
+                        echo "<p>8 - Agosto</p>";
                         break;
                     case"9":
-                        echo "9 - Setembro";
+                        echo "<p>9 - Setembro</p>";
                         break;
                     case"10":
-                        echo "10 - Outubro";
+                        echo "<p>10 - Outubro</p>";
                         break;
                     case"11":
-                        echo "11 - Novembro";
+                        echo "<p>11 - Novembro</p>";
                         break;
                     case"12":
-                        echo "12 - Dezembro";
+                        echo "<p>12 - Dezembro</p>";
                         break;
                     default:
-                        echo "Valor Inválido";
+                        echo "<p>Valor Inválido</p>";
                         break;
                 }
             }

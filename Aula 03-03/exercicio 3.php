@@ -10,15 +10,15 @@
 
 <body>
     <div class="container py-3">
-        <h1></h1>
+        <h1>Exercício 3</h1>
         <form method="post">
             <div class="mb-3">
                 <label for="a" class="form-label">Inofrme o valor A: </label>
-                <input type="number" id="valor1" name="a" class="form-control" required="">
+                <input type="number" id="a" name="a" class="form-control" required="">
             </div>
             <div class="mb-3">
                 <label for="b" class="form-label">Informe o valor B: </label>
-                <input type="number" id="valor2" name="b" class="form-control" required="">
+                <input type="number" id="b" name="b" class="form-control" required="">
             </div>
             <button type="submit" class="btn btn-primary">Enviar</button>
         </form>
@@ -28,11 +28,11 @@
                 $b = $_POST['b'];
 
                 if ($a > $b)
-                    echo "Valor A: $a <br> Valor b: $b";
+                    echo "<p>Valor A: $a <br> Valor B: $b</p>";
                 elseif($b > $a)
-                    echo "Valor B: $b <br> Valor a: $a";
+                    echo "<p>Valor B: $b <br> Valor A: $a</p>";
                 else
-                    echo "Valores iguais: $a";
+                    echo "<p>Valores iguais: $a</p>";
             }
         ?>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>

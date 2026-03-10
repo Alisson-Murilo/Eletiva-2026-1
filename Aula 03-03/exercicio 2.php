@@ -4,13 +4,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
+    <title>Exercício 2</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
     <div class="container py-3">
-        <h1></h1>
+        <h1>Exercício 2</h1>
         <form method="post">
             <div class="mb-3">
                 <label for="valor1" class="form-label">Inofrme o primeiro valor: </label>
@@ -29,10 +29,10 @@
                 $soma = $valor1 + $valor2;
                 if($valor1 == $valor2){
                     $soma *= 3;
-                    echo "Valores iguais! O triplo da soma é $soma";
+                    echo "<p>Valores iguais! O triplo da soma é $soma</p>";
                 }
                 else
-                    echo "A soma dos dois valores é $soma";
+                    echo "<p>A soma dos dois valores é $soma</p>";
             }
         ?>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
