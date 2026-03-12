@@ -12,7 +12,7 @@
 <form method="post">
 <div class="mb-3">
               <label for="num" class="form-label">Informe um número de ponto flutuante: </label>
-              <input type="number" id="num" name="num" class="form-control" required="">
+              <input type="number" id="num" name="num" class="form-control" required="" step=any>
             </div>
 <button type="submit" class="btn btn-primary">Enviar</button>
 </form>
