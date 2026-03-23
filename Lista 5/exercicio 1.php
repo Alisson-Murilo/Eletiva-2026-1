@@ -29,14 +29,20 @@ for($i=0;$i<5;$i++)
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $contato = $_POST['contato'];
     $numero = $_POST['numero'];
-    print_r($contato);
-        
+    $mapa = [];
+
     for($i=0;$i<5;$i++){
-        $nome[$contato[$i]] = $numero[$i];
+        if(!isset($mapa[$contato[$i]]) && !in_array($numero[$i], $mapa)){
+            $mapa[$contato[$i]] = $numero[$i];
+            echo "<pre>".($i+1)."° contato --\t Nome: ".$contato[$i]."\t\tNúmero: ".$numero[$i]."</pre>";
+        } else {
+            echo "<pre>".($i+1)."° contato --\t Nome ".$contato[$i]." ou Número ".$numero[$i]." Já cadastrado!</pre>";
+        }
     }
 
-    echo "<p></P>";
-    print_r($nome);
+    ksort($mapa);
+    echo "<p>=== Lista ordenada pelos nomes dos contatos ===</P>";
+    print_r($mapa);
 }
 ?>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
