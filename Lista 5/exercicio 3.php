@@ -27,7 +27,7 @@
                         <label for="preco[]" class="form-label">Informe o preço do produto: </label>
                         <input type="number" id="preco[]" name="preco[]" class="form-control" required="" step="any">
                     </div>
-                </div>'
+                </div>';
             ?>
             <button type="submit" class="btn btn-primary">Enviar</button>
         </form>
