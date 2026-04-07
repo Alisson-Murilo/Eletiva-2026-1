@@ -2,35 +2,47 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Exercício 4</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Exercício 4</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
-    <div class="container py-3">
-        <h1>Exercício 4</h1>
-        <form method="post">
-            <div class="mb-3">
-                <label for="valor" class="form-label">Insira o valor de um produto: </label>
-                <input type="number" id="valor" name="valor" class="form-control" required="">
-            </div>
-            <button type="submit" class="btn btn-primary">Enviar</button>
-        </form>
-        <?php
-            if($_SERVER['REQUEST_METHOD'] == 'POST'){
-                $valor = $_POST['valor'];
-                if($valor > 100){
-                    $valor = $valor - ($valor * 0.15);
-                    echo "<p>Desconto Aplicado! Novo valor: $valor</p>";
-                }    
-                else
-                    echo "<p>Valor do produto: $valor</p>";
-            }
-        ?>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
-    </div>
+  <div class="container py-3">
+    <h1>Exercício 4</h1>
+    <form method="post">
+      <div class="mb-3">
+        <label for="dia" class="form-label">Informe um valor para o dia</label>
+        <input type="number" id="dia" name="dia" class="form-control" required="">
+      </div>
+      <div class="mb-3">
+        <label for="mes" class="form-label">Insira um valor para o mês: </label>
+        <input type="number" id="mes" name="mes" class="form-control" required="">
+      </div>
+      <div class="mb-3">
+        <label for="ano" class="form-label">Informe um valor para o ano: </label>
+        <input type="number" id="ano" name="ano" class="form-control" required="">
+      </div>
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+    <?php
+      if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        $dia = $_POST['dia'];
+        $mes = $_POST['mes'];
+        $ano = $_POST['ano'];
+        $timestamp = mktime(0, 0, 0, $mes, $dia, $ano);
+
+        if (checkdate($mes, $dia, $ano)) {
+          $data = date("d/m/Y", $timestamp);
+          echo "<p>Data: $data</p>";
+        } else {
+          echo "<p>Data inválida!</p>";
+        }
+      }
+    ?>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+  </div>
 </body>
 
 </html>

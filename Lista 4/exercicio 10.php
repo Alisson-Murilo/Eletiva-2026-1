@@ -13,20 +13,22 @@
         <h1>Exercício 10</h1>
         <form method="post">
             <div class="mb-3">
-                <label for="num" class="form-label">Informe um número: </label>
-                <input type="number" id="num" name="num" class="form-control" required="">
+                <label for="nome" class="form-label">Insira seu nome completo: </label>
+                <input type="text" id="nome" name="nome" class="form-control" required="">
             </div>
             <button type="submit" class="btn btn-primary">Enviar</button>
         </form>
         <?php
             if($_SERVER['REQUEST_METHOD'] == 'POST'){
-                $num = $_POST['num'];
-                echo "Tabuada do Número: $num";
-
-                for($i = 1; $i <= 10; $i++){
-                    $resultado = $num * $i;
-                    echo "<p>$num X $i = $resultado</p>";
+                $nome = $_POST['nome'];
+                $saida = "Saída -> ";
+                $partes = explode(" ", $nome);
+                for($i = 0; $i < count($partes); $i++){
+                    if (ctype_upper(substr($partes[$i], 0, 1))){
+                        $saida .= substr($partes[$i], 0, 1) . ".";
+                    } 
                 }
+                echo "<p>$saida</p>";
             }
         ?>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
