@@ -1,7 +1,8 @@
 <?php
-    require_once('cabecalho.php');
+    require("cabecalho.php");
 ?>
-    <h2>Seja bem vindo <?= $_SESSION['nome']?></h2>
-
+    <h1>Seja bem vinda(o) <?= $_SESSION['nome'] ?></h1>
+    <h6><a href="logout.php">Sair</a></h6>
 <?php
-    require_once('rodape.php');
+  require("rodape.php");
+?>
