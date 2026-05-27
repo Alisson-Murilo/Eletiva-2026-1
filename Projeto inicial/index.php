@@ -44,8 +44,8 @@
           } else {
             echo "<p class='text-danger'>Credenciais inválidas!</p>";
           }
-        } catch(Exceptiom $e){
-          echo "Erro: ". $e->getMeassage();
+        } catch(Exception $e){
+          echo "Erro: ". $e->getMessage();
         }
       }
     ?>
