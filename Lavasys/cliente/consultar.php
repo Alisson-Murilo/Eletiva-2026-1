@@ -15,7 +15,7 @@
     <h1>Dados do cliente</h1>
 
     <form method="post"
-        action="consultar.php?id=<?= $resultado['id'] ?>">
+        id="formExcluir" action="consultar.php?id=<?= $resultado['id'] ?>">
         <div class="mb-3">
             <label for="nome" class="form-label">Nome</label>
             <input value="<?= $resultado['nome'] ?>" type="text" id="nome" name="nome" class="form-control" readonly>
@@ -40,7 +40,7 @@
             <input value="<?= $resultado['data_inclusao'] ?>" type="text" id="data_inclusao" name="data_inclusao" class="form-control" readonly>
         </div>
         <a href="listar.php" class="btn btn-primary">Voltar</a>
-        <button type="submit" class="btn btn-danger">Excluir</button>
+        <button onclick="confirmarExclusao()" type="button" class="btn btn-danger">Excluir</button>
     </form>
 </main>
     <?php
@@ -59,3 +59,22 @@
             }
         }
     ?>
+
+    <script>
+        function confirmarExclusao() {
+            Swal.fire({
+                title: 'Tem certeza?',
+                text: 'Essa ação não pode ser desfeita!',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#d33',
+                cancelButtonColor: '#6c757d',
+                confirmButtonText: 'Sim, excluir!',
+                cancelButtonText: 'Cancelar'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    document.getElementById('formExcluir').submit();
+                }
+            });
+        }
+    </script>
