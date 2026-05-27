@@ -22,6 +22,7 @@
                 <th>E-mail</th>
                 <th>Endereco</th>
                 <th>Data de Inclusão</th>
+                <th>Ações</th>
             </tr>
         </thead>
         <tbody>
@@ -36,7 +37,7 @@
                 <td><?= $r['data_inclusao'] ?></td>
                 <td class="d-flex gap-2">
                     <a href="editar.php?id=<?= $r['id'] ?>" class="btn btn-sm btn-warning">Editar</a>
-                    <a href="excluir.php?id=<?= $r['id'] ?>" class="btn btn-sm btn-info">Consultar</a>
+                    <a href="consultar.php?id=<?= $r['id'] ?>" class="btn btn-sm btn-info">Consultar</a>
                 </td>
             </tr>
             <?php endforeach; ?>

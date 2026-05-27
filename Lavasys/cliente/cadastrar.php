@@ -10,22 +10,26 @@ require_once('../cabecalho.php');
     <div class="mb-3">
         <label for="nome" class="form-label">Informe o nome</label>
         <input type="text" id="nome" name="nome" class="form-control" required="">
-        </div><div class="mb-3">
+    </div>
+    <div class="mb-3">
         <label for="cpf" class="form-label">Informe o CPF</label>
         <input type="text" id="cpf" name="cpf" class="form-control" required="">
-        </div><div class="mb-3">
+    </div>
+    <div class="mb-3">
         <label for="telefone" class="form-label">Informe o telefone</label>
         <input type="text" id="telefone" name="telefone" class="form-control" required="">
-        </div><div class="mb-3">
+    </div>
+    <div class="mb-3">
         <label for="email" class="form-label">Informe o e-mail</label>
         <input type="text" id="email" name="email" class="form-control" required="">
-        </div><div class="mb-3">
+    </div>
+    <div class="mb-3">
         <label for="endereco" class="form-label">Informe o endereço</label>
         <input type="text" id="endereco" name="endereco" class="form-control" required="">
-        </div>
+    </div>
     <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
 </main>
-</form>
 <?php
     if ($_SERVER['REQUEST_METHOD'] == 'POST'){
         require_once('../conexao.php');
