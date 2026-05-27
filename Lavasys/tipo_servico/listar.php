@@ -1,6 +1,6 @@
 <?php
-    require_once('../conexao.php');
     require_once('../cabecalho.php');
+    require_once('../conexao.php');
     try{
         $stmt = $pdo->query('SELECT * FROM tipo_servico');
         $resultado = $stmt->fetchAll();
