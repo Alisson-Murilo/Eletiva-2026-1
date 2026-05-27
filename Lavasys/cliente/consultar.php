@@ -58,23 +58,7 @@
                 echo "Erro: ".$e->getMessage();
             }
         }
+    require_once('../rodape.php')
     ?>
 
-    <script>
-        function confirmarExclusao() {
-            Swal.fire({
-                title: 'Tem certeza?',
-                text: 'Essa ação não pode ser desfeita!',
-                icon: 'warning',
-                showCancelButton: true,
-                confirmButtonColor: '#d33',
-                cancelButtonColor: '#6c757d',
-                confirmButtonText: 'Sim, excluir!',
-                cancelButtonText: 'Cancelar'
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    document.getElementById('formExcluir').submit();
-                }
-            });
-        }
-    </script>
+    
