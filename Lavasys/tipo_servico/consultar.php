@@ -15,11 +15,11 @@
     <form method="post"
     id="formExcluir" action="consultar.php?id=<?= $resultado['id'] ?>">
         <div class="mb-3">
-            <label for="descricao" class="form-label">Informe a descrição</label>
+            <label for="descricao" class="form-label">Descrição</label>
             <input value="<?= $resultado['descricao'] ?>" type="text" id="descricao" name="descricao" class="form-control" readonly>
         </div>
         <div class="mb-3">
-            <label for="preco_base" class="form-label">Informe o preço base do serviço</label>
+            <label for="preco_base" class="form-label">Preço base do serviço</label>
             <input value="<?= $resultado['preco_base'] ?>" type="number" id="preco_base" name="preco_base" class="form-control" readonly step="any">
         </div>
         <a href="listar.php" class="btn btn-primary">Voltar</a>
