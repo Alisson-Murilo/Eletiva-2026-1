@@ -59,6 +59,7 @@
             <label for="data_inclusao" class="form-label">Data da inclusão</label>
             <input value="<?= $resultado['data_inclusao'] ?>" type="text" id="data_inclusao" name="data_inclusao" class="form-control" readonly disabled>
         </div>
+        <a href="listar.php" class="btn btn-secondary">Voltar</a>
         <button type="submit" class="btn btn-primary">Enviar</button>
     </form>
     <?php

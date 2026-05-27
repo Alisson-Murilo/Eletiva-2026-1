@@ -27,6 +27,7 @@ require_once('../cabecalho.php');
         <label for="endereco" class="form-label">Informe o endereço</label>
         <input type="text" id="endereco" name="endereco" class="form-control" required="">
     </div>
+    <a href="listar.php" class="btn btn-secondary">Voltar</a>
     <button type="submit" class="btn btn-primary">Enviar</button>
     </form>
 </main>

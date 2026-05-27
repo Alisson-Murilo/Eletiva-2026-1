@@ -43,3 +43,4 @@
             <?php endforeach; ?>
         </tbody>
     </table>
+    <a href="../principal.php" class="btn btn-secondary">Voltar</a>
